@@ -1,0 +1,78 @@
+/* add font family  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-style: normal;
+}
+
+.btn {
+  background: linear-gradient(90deg, #E855DE 0.01%, #5400EE 100%);
+  background-size: 800% 400%;
+  /* Extended size for smooth animation */
+  border: none;
+  /* Removes border */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Changes cursor on hover */
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for hover effects */
+  animation: Gradient 5s infinite cubic-bezier(.45, .65, .75, .85) both;
+  /* Animation details */
+  border-radius: 16px;
+  /* Rounded corners */
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  /* Slightly increases size on hover */
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+.text-gradient {
+  background-image: url("../../public/Text\ bg.png");
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: flliper 5s infinite;
+}
+
+
+@keyframes flliper {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

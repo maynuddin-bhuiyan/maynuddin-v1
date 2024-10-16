@@ -1,0 +1,54 @@
+.btnDiscuss {
+    background: linear-gradient(90deg, #E855DE 0.01%, #5400EE 100%);
+    background-size: 800% 400%; /* Extended size for smooth animation */
+    border: none; /* Removes border */
+    color: white; /* Text color */
+    cursor: pointer; /* Changes cursor on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    animation: Gradient 5s infinite cubic-bezier(.45, .65, .75, .85) both; /* Animation details */
+    border-radius: 16px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    width: 320px;
+  }
+  
+  .btnDiscuss span {
+    transition: all 0.5s;
+  }
+  
+  .btnDiscuss .icon {
+    margin-right: 10px;
+    transition: 0.5s;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .btnDiscuss:hover {
+    background-color: #352a9f;
+    color: white;
+  }
+  
+  .btnDiscuss:hover span {
+    color: white;
+    transform: translateX(-25px);
+  }
+  
+  .btnDiscuss:hover .icon {
+    transform: translateX(220px);
+    transition: 0.5s;
+  }
+  
+
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
