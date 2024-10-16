@@ -35,7 +35,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="shadow-lg">
       <div className="container">
         <div className="flex justify-between items-center py-7 w-full">
           <div>
