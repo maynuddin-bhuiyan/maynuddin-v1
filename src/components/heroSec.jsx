@@ -13,7 +13,7 @@ export default function HeroSection() {
 Unlocking your value potential
         </h1>
         <p className="text-[#ffffff] font-normal text-center lg:w-[500px] m-auto">
-        Greetings! I'm a dedicated front-end web developer with NextJs and Tailwind CSS. I specialize in website and web application development.
+        Greetings! I&apos;m a dedicated front-end web developer with NextJs and Tailwind CSS. I specialize in website and web application development.
         </p>
         <div className="lg:flex items-center lg:gap-10 gap-3">
           {/* <button className="btn uppercase text-white lg:px-10 px-5 text-xl py-3 rounded-full lg:mb-0 mb-5">
