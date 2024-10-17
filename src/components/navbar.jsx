@@ -9,7 +9,7 @@ import CustomOutline from "./reuseable/custom-outline/CustomOutline";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+    const [isScroll, setIsScroll] = useState(false);
 
   const navMenuList = [
     { id: 1, menuItem: "About", href: "/about" },
@@ -18,24 +18,22 @@ const Navbar = () => {
     { id: 3, menuItem: "Blog", href: "/blog" }
   ];
 
+  // Handle scroll event to toggle sticky state
+  const handleScroll = () => {
+    setIsScroll(window.scrollY > 0);
+};
+ 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+}, []);
 
   return (
-    <div className="shadow-lg">
+    <div className={`text-white transition-all duration-300 
+      ${isScroll ? 'fixed top-0 left-0 w-full h-24 z-50 shadow-gray-700 bg-[#000000cc] shadow-md transform translate-y-0' : 'relative transform translate-y-0'} 
+      `}>
       <div className="container">
         <div className="flex justify-between items-center py-7 w-full">
           <div>

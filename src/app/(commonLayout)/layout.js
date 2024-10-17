@@ -10,12 +10,10 @@ export default function RootLayout({ children }) {
     const bodyStyle = {
         margin: 0,
         minHeight: "100vh",
-        backgroundImage: pathname === "/" ? '#000' : "none",
-        backgroundColor: pathname === "/" ? "#220837" : "#220837",
-        backgroundSize: "cover",
-        backgroundPosition: "71% 18%",
+        backgroundImage: pathname === "/" ? "url('/mask-group.png')" : "none",
+        backgroundColor: pathname === "/" ? "#101010" : "#101010",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
     };
     return (
         <html lang="en">

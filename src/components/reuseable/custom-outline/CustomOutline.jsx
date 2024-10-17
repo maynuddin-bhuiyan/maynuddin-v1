@@ -6,7 +6,7 @@ const CustomOutline = ({ href, text }) => {
   return (
     <div className={styles.gradientBox}>
       <Link href={href || "/"}>
-        <p className="text-gradient lg:text-lg uppercase font-semibold w-max space-grotesk">
+        <p className="text-gradient lg:text-lg uppercase font-semibold w-max">
           {" "}
           {text}
         </p>
