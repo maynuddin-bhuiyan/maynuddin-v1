@@ -15,6 +15,7 @@ const Navbar = () => {
     { id: 1, menuItem: "About", href: "/about" },
     { id: 2, menuItem: "Services", href: "/services" },
     { id: 3, menuItem: "Portfolio", href: "/portfolio" },
+    { id: 3, menuItem: "Gallery", href: "/gallery" },
     { id: 3, menuItem: "Blog", href: "/blog" }
   ];
 

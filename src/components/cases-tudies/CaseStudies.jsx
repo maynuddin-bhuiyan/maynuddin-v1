@@ -3,7 +3,6 @@ import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import CustomButton from '../reuseable/custom-button/CustomButton';
 
 const CaseStudies = () => {
   const CaseStudiesSlider = useRef(null);
