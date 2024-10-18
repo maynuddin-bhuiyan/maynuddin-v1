@@ -19,7 +19,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'custom-gradient': 'linear-gradient(90deg, #E855DE 0.01%, #5400EE 100%)',
-      },      
+      }, 
+      clipPath: {
+        'custom': 'inset(29% 31% 0 3%)',
+      },     
       colors: {
         base: '#6533E2',
         title: {
