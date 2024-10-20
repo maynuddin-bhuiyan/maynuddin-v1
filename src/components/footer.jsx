@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { TbFileCv } from "react-icons/tb";
+
 
 const SocialMediaButton = ({ backgroundColor, children, href }) => {
     return (
@@ -24,18 +26,20 @@ const SocialMediaButton = ({ backgroundColor, children, href }) => {
 export default function Footer() {
 
     const iconsData = [
+      { id: 1, icon: <TbFileCv size={20} />, href: "https://drive.google.com/file/d/1usXHdm2ie_le1ROQAZgvvLN5PuMTKtCu/view?usp=sharing" },
+      { id: 2, icon: <FaGithub size={20} />, href: "https://github.com/maynuddin-bhuiyan" },
+      {
+        id: 4,
+        icon: <FaLinkedinIn size={20} />,
+        href: "https://www.linkedin.com/in/maynuddin-bhuiyan/",
+      },
         {
           id: 1,
           icon: <FaFacebookF size={20} />,
-          href: "https://www.facebook.com/codethinkerofficial?mibextid=ZbWKwL",
-        },
-        { id: 2, icon: <FaTwitter size={20} />, href: "/" }, // Use FaTwitter instead of FaXTwitter
-        { id: 3, icon: <FaInstagram size={20} />, href: "/" },
-        {
-          id: 4,
-          icon: <FaLinkedinIn size={20} />,
-          href: "https://www.linkedin.com/company/codethinker/",
-        },
+          href: "https://www.facebook.com/devmaynuddin",
+        },     
+        
+        
     ];
     
     return (
@@ -46,10 +50,10 @@ export default function Footer() {
             <p className="text-lg">Software Developer</p>
           </div>
           <nav className="flex space-x-6 lg:my-0 my-3">
-            <Link href="#about" className="hover:text-pink-500">About</Link>
-            <Link href="#services" className="hover:text-pink-500">Services</Link>
-            <Link href="#portfolio" className="hover:text-pink-500">Portfolio</Link>
-            <Link href="#contact" className="hover:text-pink-500">Contact</Link>
+            <Link href="/about" className="hover:text-pink-500">About</Link>
+            <Link href="/services" className="hover:text-pink-500">Services</Link>
+            <Link href="/portfolio" className="hover:text-pink-500">Portfolio</Link>
+            <Link href={"https://blog-maynuddin.vercel.app/"} target="_blank" className="hover:text-pink-500">Blog</Link>
           </nav>
         
           <div className="flex gap-5 flex-wrap">
