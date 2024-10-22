@@ -21,7 +21,7 @@ const WhatWeDo = () => {
     {
       id: 2,
       number: "02",
-      image: "/Headless.webp",
+      image: "/headless.webp",
       title: "Headless CMS with WordPress",
       text: "'Headless CMS with WordPress': uses WordPress as a backend solely for content management, while the frontend is handled separately by frameworks like React, Vue, or Next.js. In this decoupled setup, content is delivered via WordPress's REST API or GraphQL to different frontends, enabling more flexible design, faster performance, and enhanced scalability.",
     },
