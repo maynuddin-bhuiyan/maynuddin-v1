@@ -76,7 +76,7 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className="hidden lg:flex items-center gap-5">
-            <CustomOutline text={"Contact"} href={"https://calendly.com/maynuddinbhu14grm/30min"} />
+            <CustomOutline text={"Contact"} href={"https://wa.me/8801618559839"} />
           </div>
         </div>
 
@@ -110,7 +110,7 @@ const Navbar = () => {
                 </Link>
               </li>
               </ul>
-              <CustomOutline text={"Contact"} href={"https://calendly.com/maynuddinbhu14grm/30min"} />
+              <CustomOutline text={"Contact"} href={"https://wa.me/8801618559839"} />
             </div>
           </div>
         )}

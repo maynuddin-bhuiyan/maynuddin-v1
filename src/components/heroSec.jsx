@@ -30,7 +30,7 @@ export default function HeroSection() {
           Greetings! I&apos;m a dedicated front-end web developer with NextJs and Tailwind CSS. I specialize in website and web application development.
         </p>
         <div className="lg:flex items-center lg:gap-10 gap-3">
-        <CustomButton href="https://wa.me/8801618559839" text="Let's discuss a project" Icon={RiMessage3Line} />        
+        <CustomButton href="https://calendly.com/maynuddinbhu14grm/30min" text="Let's discuss a project" Icon={RiMessage3Line} />        
           <CustomOutline href={"https://www.upwork.com/freelancers/~01f7cc88efacd92019"} text={"Hire me"} />
         </div>
       </div>
