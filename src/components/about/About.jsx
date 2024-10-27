@@ -67,7 +67,7 @@ const About = () => {
 
                         <p className="text-gray-300">
 
-                            "Responsible for front-end development with expertise in React JS and Next.js."
+                            Responsible for front-end development with expertise in React JS and Next.js.
 
 
                         </p>
