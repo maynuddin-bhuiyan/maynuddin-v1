@@ -6,7 +6,7 @@ import { RiMessage3Line } from "react-icons/ri";
 
 export default function HeroSection() {
   return (
-    <div className="h-max relative lg:pt-10 pt-14 pb-40">
+    <div className="h-max relative pt-14 pb-40">
       <div className="absolute xl:top-0 xl:left-20 lg:left-0 lg:-top-16 -bottom-5 left-10 bounce-fade">
         <Image src={"/tailwind.svg"} alt="img" width={250} height={100} />
       </div>
@@ -21,10 +21,9 @@ export default function HeroSection() {
         <Image src={"/html.svg"} alt="img" width={240} height={100} />
       </div>
       <div className="flex items-center flex-col gap-5 h-full lg:space-y-5">
-        <h1 className="text-gradient text-2xl space-grotesk lg:text-6xl lg:w-[900px] md:w-[600px] m-auto !font-extralight text-center">
-          Building the future for brands
-          and entertainers
-          Unlocking your value potential
+        <h1 className="text-gradient text-2xl space-grotesk lg:text-7xl lg:!leading-[90px] lg:w-[900px] md:w-[600px] m-auto !font-extralight text-center">
+        Building Websites that Bring Brands to Life
+
         </h1>
         <p className="text-[#ffffff] font-normal text-center lg:w-[500px] md:w-[400px] m-auto">
           Greetings! I&apos;m a dedicated front-end web developer with NextJs and Tailwind CSS. I specialize in website and web application development.

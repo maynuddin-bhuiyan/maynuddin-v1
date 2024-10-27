@@ -54,8 +54,8 @@ const CaseStudies = () => {
   const data = [
     {
       id: 1,
-      hoverImage: '/case-1.png',
-      image: '/case-2.jpg',
+      hoverImage: '/hover-1.png',
+      image: '/gallery-3.png',
       butText: 'View Case Study',
       url: '/',
     },
@@ -127,7 +127,7 @@ const CaseStudies = () => {
           {data.map((item) => (
             <div key={item.id} className="p-1">
               <div
-                className="relative cursor-pointer"
+                className="relative w-[550px] cursor-pointer overflow-hidden h-[350px]"
                 onMouseEnter={() => setShow(item.id)}
                 onMouseLeave={() => setShow(null)}
               >
@@ -136,13 +136,14 @@ const CaseStudies = () => {
                   height={385}
                   src={item.id === show ? item.hoverImage : item.image}
                   alt="Case Study"
-                  className="rounded-lg transition-all duration-600 ease-in-out"
+                  className={`rounded ${item.hoverImage && item.id === show ? "fade-in" : ""}`}
                 />
                 {item.id === show && (
-                    <div className=" absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                        <div className='flex justify-between items-center gap-5'>
+                    <div className="w-full h-full bg-slate-700 bg-opacity-70 absolute top-0 left-1/2 transform -translate-x-1/2">
+                        <div className='flex flex-col justify-center items-center gap-5'>
+                          <h2 className="text-3xl text-black font-bold capitalize mt-20">maynuddin</h2>
                         <button className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Vîsït"}</button>
-                        <button className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Code"}</button>
+                        {/* <button className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Code"}</button> */}
                         </div>
                     {/* <CustomButton href="/contact" text={item.butText} Icon={FaArrowRight} />        */}
                     </div>
