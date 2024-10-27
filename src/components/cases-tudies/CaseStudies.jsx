@@ -3,6 +3,11 @@ import Image from 'next/image';
 import React, { useRef, useState } from 'react';
 import Slider from 'react-slick';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
+import { MdOutlineVisibility } from "react-icons/md";
+
+import { RiMessage3Line } from 'react-icons/ri';
+import CustomButton from '../reuseable/custom-button/CustomButton';
 
 const CaseStudies = () => {
   const CaseStudiesSlider = useRef(null);
@@ -27,7 +32,7 @@ const CaseStudies = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -56,52 +61,52 @@ const CaseStudies = () => {
       id: 1,
       hoverImage: '/hover-1.png',
       image: '/gallery-3.png',
-      butText: 'View Case Study',
-      url: '/',
+      title: 'Career Props',
+      url: 'https://career-props.vercel.app/',
     },
     {
-        id: 8,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
-      },
-      {
-        id: 9,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
-      },
-      {
-        id: 7,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
-      },
-      {
         id: 2,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
-      },
-      {
-        id: 5,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
+        hoverImage: '/hover-2.png',
+        image: '/service-1.png',
+        title: 'brangerine',
+        url: 'https://brangerine-ukcf.vercel.app/',
       },
       {
         id: 3,
-        hoverImage: '/case-1.png',
-        image: '/case-2.jpg',
-        butText: 'View Case Study',
-        url: '/',
+        hoverImage: '/hover-3.png',
+        image: '/service-2.png',
+        title: 'Tax Case Study',
+        url: 'https://tax-5.vercel.app/',
       },
-    // More case studies...
+      {
+        id: 4,
+        hoverImage: '/hover-4.png',
+        image: '/service-3.png',
+        title: 'Pos Props',
+        url: 'https://pos-props.vercel.app/',
+      },
+      {
+        id: 5,
+        hoverImage: '/service-4.png',
+        image: '/hover-5.png',
+        title: 'Restaurants Website',
+        url: 'https://aladdinshut.com/',
+      },
+      {
+        id: 6,
+        hoverImage: '/hover-6.png',
+        image: '/service-5.png',
+        title: 'Tiger new energy',
+        url: 'https://tigernewenergy.com/',
+      },
+      {
+        id: 7,
+        hoverImage: '/hover-7.png',
+        image: '/service-6.png',
+        title: 'Tiggzy It',
+        url: 'https://tiggzyit.com/',
+      },
+   
   ];
 
   return (
@@ -125,9 +130,9 @@ const CaseStudies = () => {
         </div>
         <Slider {...settings} className="slickSlider 2xl:ml-20 xl:ml-14 lg:ml-10 md:ml-5 ml-1" ref={CaseStudiesSlider}>
           {data.map((item) => (
-            <div key={item.id} className="p-1">
+            <div key={item.id} className="p-1 ">
               <div
-                className="relative w-[550px] cursor-pointer overflow-hidden h-[350px]"
+                className="relative xl:w-[550px] cursor-pointer overflow-hidden xl:h-[350px] lg:h-[300px] h-[280px]"
                 onMouseEnter={() => setShow(item.id)}
                 onMouseLeave={() => setShow(null)}
               >
@@ -136,23 +141,26 @@ const CaseStudies = () => {
                   height={385}
                   src={item.id === show ? item.hoverImage : item.image}
                   alt="Case Study"
-                  className={`rounded ${item.hoverImage && item.id === show ? "fade-in" : ""}`}
+                  className={`rounded border ${item.hoverImage && item.id === show ? "fade-in" : ""}`}
                 />
                 {item.id === show && (
                     <div className="w-full h-full bg-slate-700 bg-opacity-70 absolute top-0 left-1/2 transform -translate-x-1/2">
                         <div className='flex flex-col justify-center items-center gap-5'>
-                          <h2 className="text-3xl text-black font-bold capitalize mt-20">maynuddin</h2>
-                        <button className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Vîsït"}</button>
-                        {/* <button className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Code"}</button> */}
-                        </div>
-                    {/* <CustomButton href="/contact" text={item.butText} Icon={FaArrowRight} />        */}
-                    </div>
-                  
+                          <h2 className="text-3xl text-white font-bold capitalize mt-20">{item?.title}</h2>
+                        <Link target='_blank' href={item?.url} className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Vîsït"}</Link>
+                        </div>                    
+                    </div>                  
                 )}
               </div>
             </div>
           ))}
         </Slider>
+
+        <div className="container">
+         <div className="flex justify-center lg:my-10 my-5">
+          <CustomButton href="https://docs.google.com/document/d/1osR5T2wpZfBYNNXNK4l7M6vvdh57zSEcl7GKfSfPpG0/edit?usp=sharing" text="Check Out All Projects!" Icon={MdOutlineVisibility} />        
+                    </div>
+        </div>
       
     </div>
   );
