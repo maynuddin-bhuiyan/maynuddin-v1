@@ -69,7 +69,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="text-lg capitalize text-[#ffffff] ">
-                <Link href={"https://blog-maynuddin.vercel.app/"} target="_blank">
+                <Link href={"https://blog.maynuddin.com/"} target="_blank">
                   {"Blog"}
                 </Link>
               </li>
@@ -105,7 +105,7 @@ const Navbar = () => {
                   </li>
                 ))}
                 <li className="text-lg capitalize text-[#ffffff] ">
-                <Link href={"https://blog-maynuddin.vercel.app/"} target="_blank">
+                <Link href={"https://blog.maynuddin.com/"} target="_blank">
                   {"Blog"}
                 </Link>
               </li>

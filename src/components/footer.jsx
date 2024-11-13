@@ -26,7 +26,7 @@ const SocialMediaButton = ({ backgroundColor, children, href }) => {
 export default function Footer() {
 
     const iconsData = [
-      { id: 1, icon: <TbFileCv size={20} />, href: "https://drive.google.com/file/d/1k6Ma0DeXyldWbgtNLo1i4MYQP6mwo2vo/view?usp=sharing" },
+      { id: 1, icon: <TbFileCv size={20} />, href: "https://drive.google.com/file/d/1WqIVuShqUjqD2_8y9zd_N7_jJB1CbF1J/view?usp=sharing" },
       { id: 2, icon: <FaGithub size={20} />, href: "https://github.com/maynuddin-bhuiyan" },
       {
         id: 4,
@@ -47,13 +47,14 @@ export default function Footer() {
         <div className="container mx-auto flex flex-wrap justify-between items-center ">
           <div className="flex flex-col">
             <h2 className="text-black text-2xl font-bold text-gradient space-grotesk ">Maynuddin</h2>
-            <p className="text-lg">Software Developer</p>
-          </div>
+            <p className="text-sm lg:text-base !text-white">Software Developer</p>
+            <Link className="text-sm text-gray-300" href="mailto:hi@maynuddin.com">hi@maynuddin.com</Link>
+            </div>
           <nav className="flex space-x-6 lg:my-0 my-3">
             <Link href="/about" className="hover:text-pink-500">About</Link>
             <Link href="/services" className="hover:text-pink-500">Services</Link>
             <Link href="/portfolio" className="hover:text-pink-500">Portfolio</Link>
-            <Link href={"https://blog-maynuddin.vercel.app/"} target="_blank" className="hover:text-pink-500">Blog</Link>
+            <Link href={"https://blog.maynuddin.com/"} target="_blank" className="hover:text-pink-500">Blog</Link>
           </nav>
         
           <div className="flex gap-5 flex-wrap">
