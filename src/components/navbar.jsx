@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import CustomOutline from "./reuseable/custom-outline/CustomOutline";
+import CustomButton from "./reuseable/custom-button/CustomButton";
+import { RiMessage3Line } from "react-icons/ri";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +14,9 @@ const Navbar = () => {
 
   const navMenuList = [
     { id: 1, menuItem: "About", href: "/about" },
-    { id: 2, menuItem: "Services", href: "/services" },
-    { id: 3, menuItem: "Portfolio", href: "/portfolio" },
-    { id: 4, menuItem: "Gallery", href: "/gallery" },
+    // { id: 2, menuItem: "Services", href: "/services" },
+    { id: 2, menuItem: "Portfolio", href: "/portfolio" },
+    { id: 3, menuItem: "Gallery", href: "/gallery" },
   ];
 
   // Handle scroll event to toggle sticky state
@@ -77,6 +79,7 @@ const Navbar = () => {
           </nav>
           <div className="hidden lg:flex items-center gap-5">
             <CustomOutline text={"Contact"} href={"https://wa.me/8801618559839"} />
+            {/* <CustomButton href="https://calendly.com/maynuddinbhu14grm/30min" text="download cv" Icon={RiMessage3Line} />         */}
           </div>
         </div>
 

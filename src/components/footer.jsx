@@ -26,7 +26,7 @@ const SocialMediaButton = ({ backgroundColor, children, href }) => {
 export default function Footer() {
 
     const iconsData = [
-      { id: 1, icon: <TbFileCv size={20} />, href: "https://drive.google.com/file/d/1WqIVuShqUjqD2_8y9zd_N7_jJB1CbF1J/view?usp=sharing" },
+      // { id: 1, icon: <TbFileCv size={20} />, href: "https://drive.google.com/file/d/1WqIVuShqUjqD2_8y9zd_N7_jJB1CbF1J/view?usp=sharing" },
       { id: 2, icon: <FaGithub size={20} />, href: "https://github.com/maynuddin-bhuiyan" },
       {
         id: 4,

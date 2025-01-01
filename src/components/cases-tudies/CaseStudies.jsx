@@ -147,7 +147,7 @@ const CaseStudies = () => {
                     <div className="w-full h-full bg-slate-700 bg-opacity-70 absolute top-0 left-1/2 transform -translate-x-1/2">
                         <div className='flex flex-col justify-center items-center gap-5'>
                           <h2 className="text-3xl text-white font-bold capitalize mt-20">{item?.title}</h2>
-                        <Link target='_blank' href={item?.url} className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Vîsït"}</Link>
+                        <Link target='_blank' href={item?.url}  className="theme-btn lg:text-sm bg-custom-gradient text-white montserrat font-semibold">{"Vîsït"}</Link>
                         </div>                    
                     </div>                  
                 )}
