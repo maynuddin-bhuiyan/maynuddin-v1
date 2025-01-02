@@ -50,13 +50,13 @@ const WhatWeDo = () => {
   };
 
   return (
-    <div className="relative pt-5 pb-10 lg:pb-32">
+    <div className="relative pt-5 pb-10 lg:pb-32 xl:h-[1100px]">
       <h3 className="lg:text-2xl text-lg font-bold text-center text-white capitalize">My Capabilities</h3>
       <h1 className="lg:text-6xl text-2xl font-bold montserrat text-center text-gradient lg:mt-4 mb-5 lg:mb-16 max-w-3xl mx-auto">
         In what area do you need assistance
       </h1>
-      <div className="container mx-auto flex flex-wrap lg:flex-row flex-col-reverse">
-        <div className="w-full lg:w-1/2 mb-8">
+      <div className="container mx-auto flex flex-wrap lg:flex-row flex-col-reverse lg:gap-7">
+        <div className="w-full lg:w-[48%] mb-8 ">
           <div className="relative">
             <div className="absolute lg:-top-8 -top-0 left-0 z-10">
               <Image
