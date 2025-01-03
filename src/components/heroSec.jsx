@@ -1,8 +1,5 @@
 "use client";
 import Image from "next/image";
-import CustomButton from "./reuseable/custom-button/CustomButton";
-import CustomOutline from "./reuseable/custom-outline/CustomOutline";
-import { RiMessage3Line } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -54,7 +51,7 @@ export default function HeroSection() {
         <Image src={"/js.svg"} alt="img" width={150} height={100} />
       </div>
 
-      <div className="absolute xl:-top-7 lg:-top-0 xl:right-0 lg:right-0 -top-14 -right-5 spin-slow ">
+      <div className="absolute xl:-top-7 lg:-top-0 xl:right-0 lg:right-0 -top-14 -right-5 spin-slow lg:block hidden ">
         <Image src={"/react.svg"} alt="img" width={150} height={100} />
       </div>
       <div className="absolute lg:bottom-10 xl:right-0 lg:right-0 lg:block hidden up-down">
@@ -65,7 +62,7 @@ export default function HeroSection() {
           <div className="order-2 lg:order-1 flex items-center justify-center">
             <div className="relative">
               {/* Shapes */}
-              <div className="absolute -top-20 -left-28">
+              <div className="absolute -top-20 -left-28 lg:block hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="90"
@@ -88,7 +85,7 @@ export default function HeroSection() {
                 width={350}
                 height={300}
               />
-              <div className="absolute  -bottom-20 -right-20">
+              <div className="absolute  -bottom-20 -right-20 lg:block hidden">
                 <svg
                   className="bounce-fade"
                   xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +103,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <h1 className="mb-6 lg:mb-2 lg:w-full w-[300px]">
+            <h1 className="mb-6 lg:mb-2">
               <span className="text-gradient text-lg lg:text-3xl space-grotesk">
                 {staticText}
               </span>
@@ -140,7 +137,7 @@ export default function HeroSection() {
               on-site work, and I am open to relocation as well.
             </p>
 
-            <div className="mb-10 lg:mb-0">
+            <div className="mb-10 lg:mb-0 mt-5 lg:mt-0">
               <Link target="_blank"
                 href={"https://drive.google.com/file/d/1WqIVuShqUjqD2_8y9zd_N7_jJB1CbF1J/view?usp=sharing"}
                 className="theme-btn capitalize lg:text-sm bg-custom-gradient text-white montserrat font-semibold"

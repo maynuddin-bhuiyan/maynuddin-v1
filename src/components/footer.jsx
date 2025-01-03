@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { TbFileCv } from "react-icons/tb";
+
 
 
 const SocialMediaButton = ({ backgroundColor, children, href }) => {
@@ -43,7 +43,7 @@ export default function Footer() {
     ];
     
     return (
-      <footer className="bg-transparent text-white py-5 shadow-lg border-t border-gray-500 lg:fixed lg:w-full lg:bottom-0 lg:left-0">
+      <footer className="bg-transparent text-white py-5 shadow-lg border-t border-gray-500 xl:fixed xl:w-full xl:bottom-0 xl:left-0">
         <div className="container mx-auto flex flex-wrap justify-between items-center ">
           <div className="flex flex-col">
             <h2 className="text-black text-2xl font-bold text-gradient space-grotesk ">Maynuddin</h2>
@@ -52,7 +52,7 @@ export default function Footer() {
             </div>
           <nav className="flex space-x-6 lg:my-0 my-3">
             <Link href="/about" className="hover:text-pink-500">About</Link>
-            <Link href="/services" className="hover:text-pink-500">Services</Link>
+            {/* <Link href="/services" className="hover:text-pink-500">Services</Link> */}
             <Link href="/portfolio" className="hover:text-pink-500">Portfolio</Link>
             <Link href={"https://blog.maynuddin.com/"} target="_blank" className="hover:text-pink-500">Blog</Link>
           </nav>

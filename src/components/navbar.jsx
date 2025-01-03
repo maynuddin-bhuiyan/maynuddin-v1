@@ -14,9 +14,9 @@ const Navbar = () => {
 
   const navMenuList = [
     { id: 1, menuItem: "About", href: "/about" },
-    // { id: 2, menuItem: "Services", href: "/services" },
+    { id: 2, menuItem: "Resume", href: "/resume" },
     { id: 2, menuItem: "Portfolio", href: "/portfolio" },
-    { id: 3, menuItem: "Gallery", href: "/gallery" },
+    // { id: 3, menuItem: "Gallery", href: "/gallery" },
   ];
 
   // Handle scroll event to toggle sticky state
@@ -36,7 +36,7 @@ const Navbar = () => {
       className={`text-white transition-all duration-300 
       ${
         isScroll || isMenuOpen
-          ? "fixed top-0 left-0 w-full h-24 z-50 shadow-gray-700 bg-[#000000cc] shadow-md transform translate-y-0"
+          ? "lg:static fixed top-0 left-0 w-full h-24 z-50 shadow-gray-700 bg-[#000000cc] shadow-md transform translate-y-0"
           : "relative transform translate-y-0"
       } 
       `}
@@ -85,12 +85,12 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="fixed top-0 bg-[#000A14] bg-opacity-90 z-50 w-full h-screen">
+          <div className="fixed top-0 bg-[#000A14] bg-opacity-95 left-0 z-50 w-full h-screen">
             <div className="relative flex flex-col items-center justify-center lg:hidden h-full">
               {/* Close button */}
               <MdClose
                 onClick={() => setIsMenuOpen(false)}
-                className="absolute top-4 right-10 text-[#fff]"
+                className="absolute top-4 right-2 text-[#fff]"
                 size={30}
               />
               <ul className="flex flex-col items-center gap-5 mb-4">

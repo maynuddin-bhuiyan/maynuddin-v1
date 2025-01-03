@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-14">
           <div className="relative lg:h-[430px] md:h-[450px] h-[300px]">
             {/* Shapes */}
-            <div className="absolute -top-6 -left-5">
+            <div className="absolute -top-6 -left-5 lg:block hidden">
               <svg
                 className="up-down"
                 xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const About = () => {
                 width={200}
                 height={300}
               />
-              <div className="absolute md:-bottom-32 -bottom-20 right-5">
+              <div className="absolute md:-bottom-32 -bottom-20 right-5 lg:block hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="90"
@@ -67,7 +67,7 @@ const About = () => {
                 width={300}
                 height={200}
               />
-              <div className="absolute -bottom-6 -right-6 z-10">
+              <div className="absolute -bottom-6 -right-6 z-10 lg:block hidden">
                 <svg
                   className="up-down"
                   xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center">
+          <div className="">
             <h3 className="lg:text-lg font-medium text-indigo-500 lg:mb-2">
               Meet the Developer
             </h3>
