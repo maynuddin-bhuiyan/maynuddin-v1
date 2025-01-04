@@ -43,7 +43,7 @@ export default function Footer() {
     ];
     
     return (
-      <footer className="bg-transparent text-white py-5 shadow-lg border-t border-gray-500 xl:fixed xl:w-full xl:bottom-0 xl:left-0">
+      <footer className="bg-transparent text-white py-5 shadow-lg border-t border-gray-500 2xl:fixed 2xl:w-full 2xl:bottom-0 2xl:left-0">
         <div className="container mx-auto flex flex-wrap justify-between items-center ">
           <div className="flex flex-col">
             <h2 className="text-black text-2xl font-bold text-gradient space-grotesk ">Maynuddin</h2>

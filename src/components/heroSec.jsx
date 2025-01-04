@@ -62,7 +62,7 @@ export default function HeroSection() {
           <div className="order-2 lg:order-1 flex items-center justify-center">
             <div className="relative">
               {/* Shapes */}
-              <div className="absolute -top-20 -left-28 lg:block hidden">
+              <div className="absolute -top-20 -left-28 xl:block hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="90"
@@ -85,7 +85,7 @@ export default function HeroSection() {
                 width={350}
                 height={300}
               />
-              <div className="absolute  -bottom-20 -right-20 lg:block hidden">
+              <div className="absolute  -bottom-20 -right-20 xl:block hidden">
                 <svg
                   className="bounce-fade"
                   xmlns="http://www.w3.org/2000/svg"

@@ -162,8 +162,7 @@ const Resume = () => {
                   <div className="flex items-start gap-4">
                     <div className="relative pt-1"> 
                       {/* Dot */}
-                      <div className="w-4 h-4 bg-custom-gradient rounded-full"></div>
-                      
+                      <div className="w-4 h-4 bg-custom-gradient rounded-full"></div>                      
                     </div>
                     <div>
                       <h3 className="lg:text-xl font-semibold">
