@@ -1,5 +1,5 @@
 /* add font family  */
-@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,7 @@ body {
 }
 
 .space-grotesk {
-  font-family: 'Dela Gothic One', cursive;
+  font-family: "Outfit", serif;
   font-style: normal;
 }
 
