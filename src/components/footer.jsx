@@ -43,10 +43,10 @@ export default function Footer() {
     ];
     
     return (
-      <footer className="bg-transparent text-white py-5 shadow-lg border-t border-gray-500 2xl:fixed 2xl:w-full 2xl:bottom-0 2xl:left-0">
-        <div className="container mx-auto flex flex-wrap justify-between items-center ">
+      <footer className="bg-transparent text-white py-3 lg:py-5 shadow-lg border-t border-gray-500 2xl:fixed 2xl:w-full 2xl:bottom-0 2xl:left-0">
+        <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="flex flex-col">
-            <h2 className="text-black text-2xl font-bold text-gradient space-grotesk ">Maynuddin</h2>
+            <h2 className="text-black text-2xl font-bold text-gradient space-grotesk">Maynuddin</h2>
             <p className="text-sm lg:text-base !text-white">Software Developer</p>
             <Link className="text-sm text-gray-300" href="mailto:hi@maynuddin.com">hi@maynuddin.com</Link>
             </div>
@@ -57,7 +57,7 @@ export default function Footer() {
             <Link href={"https://blog.maynuddin.com/"} target="_blank" className="hover:text-pink-500">Blog</Link>
           </nav>
         
-          <div className="flex gap-5 flex-wrap">
+          <div className="flex gap-5 flex-wrap mt-3 lg:mt-0">
             {iconsData.map((item) => (
               <SocialMediaButton
                 key={item.id}
