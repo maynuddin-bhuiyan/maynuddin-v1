@@ -139,7 +139,7 @@ export default function HeroSection() {
 
             <div className="mb-10 lg:mb-0 mt-5 lg:mt-0">
               <Link target="_blank"
-                href={"https://drive.google.com/file/d/1WqIVuShqUjqD2_8y9zd_N7_jJB1CbF1J/view?usp=sharing"}
+                href={"https://drive.google.com/file/d/1YqXKtFfL9Kd8PI-TuLOcPt5gCU8YNpLO/view?usp=sharing"}
                 className="theme-btn capitalize lg:text-sm bg-custom-gradient text-white montserrat font-semibold"
               >
                 download cv
