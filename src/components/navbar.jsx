@@ -15,7 +15,7 @@ const Navbar = () => {
     { id: 1, menuItem: "About", href: "/about" },
     { id: 2, menuItem: "Resume", href: "/resume" },
     { id: 3, menuItem: "Projects", href: "/projects" },
-    // { id: 4, menuItem: "Awards", href: "/awards" },
+    { id: 4, menuItem: "Awards", href: "/awards" },
   ];
 
   // Handle scroll event to toggle sticky state
