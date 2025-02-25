@@ -165,7 +165,7 @@ const CaseStudies = () => {
 
         <div className="container">
          <div className="flex justify-center lg:my-10 my-5">
-          <CustomButton href="https://docs.google.com/document/d/1osR5T2wpZfBYNNXNK4l7M6vvdh57zSEcl7GKfSfPpG0/edit?usp=sharing" text="Check Out All Projects!" Icon={MdOutlineVisibility} />        
+          <CustomButton href="https://docs.google.com/document/d/1rADskxGCWAM4tTQmoOosOWTk81lhxdfM/edit?usp=sharing&ouid=116522643235246232376&rtpof=true&sd=true" text="Check Out All Projects!" Icon={MdOutlineVisibility} />        
                     </div>
         </div>
       
