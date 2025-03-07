@@ -62,7 +62,7 @@ const CaseStudies = () => {
       hoverImage: '/product-1.png',
       image: '/product-2.png',
       title: 'AddItion (E-Commerce Frontend)',
-      url: 'https://career-props.vercel.app/',
+      url: 'https://additionbhu.vercel.app/',
     },
     {
       id: 2,
