@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const SocialMediaButton = ({ backgroundColor, children, href }) => {
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-transparent text-white py-3 lg:py-5 shadow-lg border-t border-gray-500 2xl:fixed 2xl:w-full 2xl:bottom-0 2xl:left-0">
+    <footer className="bg-transparent text-white py-3 lg:py-5 shadow-lg border-t border-gray-500  2xl:w-full">
       <div className="container">
         <div className="lg:flex lg:justify-between items-center">
           <div className="flex flex-col">
@@ -65,7 +65,7 @@ export default function Footer() {
             </Link>
             {/* <Link href="/services" className="hover:text-pink-500">Services</Link> */}
             <Link href="/projects" className="hover:text-pink-500">
-            Projects
+              Projects
             </Link>
             <Link
               href={"https://blog.maynuddin.com/"}
