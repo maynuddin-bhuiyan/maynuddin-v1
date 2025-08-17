@@ -13,7 +13,8 @@ export default function AwardsPage() {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="pb-10 lg:pb-20">
+      <div className="container">
       {/* Header */}
       <div className="flex mb-6 gap-3 mt-5 items-center">
         <div className="bg-custom-gradient p-2 rounded-md">
@@ -46,6 +47,7 @@ export default function AwardsPage() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }

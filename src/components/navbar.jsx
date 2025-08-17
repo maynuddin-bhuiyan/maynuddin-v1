@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import CustomOutline from "./reuseable/custom-outline/CustomOutline";
-import { useRouter } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter(); // Initialize useRouter
@@ -33,11 +33,10 @@ const Navbar = () => {
   return (
     <div
       className={`text-white transition-all duration-300 
-      ${
-        isScroll || isMenuOpen
+      ${isScroll || isMenuOpen
           ? "lg:static fixed top-0 left-0 w-full h-24 z-50 shadow-gray-700 bg-[#000000cc] shadow-md transform translate-y-0"
-          : "relative transform translate-y-0"
-      }`}
+          : "relative transform translate-y-0 bg-transparent"
+        }`}
     >
       <div className="container">
         <div className="flex justify-between items-center py-7 w-full">
@@ -64,11 +63,10 @@ const Navbar = () => {
                 <li key={item.id} className="text-lg capitalize">
                   <Link
                     href={item.href}
-                    className={`${
-                      router.pathname === item.href
-                        ? "!text-blue-400 font-bold" // Active link style
-                        : "text-[#ffffff]"
-                    }`}
+                    className={`${router.pathname === item.href
+                      ? "!text-blue-400 font-bold" // Active link style
+                      : "text-[#ffffff]"
+                      }`}
                   >
                     {item.menuItem}
                   </Link>
@@ -109,11 +107,10 @@ const Navbar = () => {
                   <li key={item.id} className="text-xl capitalize">
                     <Link
                       href={item.href}
-                      className={`${
-                        router.pathname === item.href
-                          ? "text-blue-400 font-bold" // Active link style
-                          : "text-[#ffffff]"
-                      }`}
+                      className={`${router.pathname === item.href
+                        ? "text-blue-400 font-bold" // Active link style
+                        : "text-[#ffffff]"
+                        }`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.menuItem}
