@@ -4,16 +4,17 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
+// Move texts array outside the component to prevent recreation on each render
+const texts = [
+  "Maynuddin Bhuiyan",
+  "a Frontend Developer",
+  "React.js & Next.js Expert",
+  "UI/UX Enthusiast",
+  "Problem Solver",
+]
+
 export default function HeroSection() {
   const staticText = "I'm "
-  const texts = [
-    "Maynuddin Bhuiyan",
-    "a Frontend Developer",
-    "React.js & Next.js Expert",
-    "UI/UX Enthusiast",
-    "Problem Solver",
-  ]
-
   const [displayedText, setDisplayedText] = useState("")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [charIndex, setCharIndex] = useState(0)
@@ -40,7 +41,8 @@ export default function HeroSection() {
     }, typingSpeed)
 
     return () => clearTimeout(timeout)
-  }, [charIndex, isDeleting, currentIndex, texts])
+    // Removed 'texts' from dependency array since it's now defined outside the component
+  }, [charIndex, isDeleting, currentIndex])
 
   return (
     <div className="min-h-screen relative overflow-hidden">

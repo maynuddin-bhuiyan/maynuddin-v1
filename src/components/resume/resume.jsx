@@ -4,11 +4,11 @@ import Link from "next/link"
 import { memo, useCallback, useEffect, useRef, useState } from "react"
 import { FaBriefcase, FaCode, FaExternalLinkAlt, FaGraduationCap } from "react-icons/fa"
 
+// SectionHeader Component
 const SectionHeader = memo(({ icon, title, index, isVisible }) => (
   <div className="flex items-center gap-4 mb-8" data-index={index}>
     <div
-      className={`bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-xl transition-transform duration-700 hover:rotate-12 hover:scale-110 ${isVisible ? "scale-100 animate-bounce" : "scale-0"
-        }`}
+      className={`bg-gradient-to-r from-blue-500 to-purple-500 p-4 rounded-xl transition-transform duration-700 hover:rotate-12 hover:scale-110 ${isVisible ? "scale-100 animate-bounce" : "scale-0"}`}
     >
       {icon}
     </div>
@@ -17,11 +17,12 @@ const SectionHeader = memo(({ icon, title, index, isVisible }) => (
     </h2>
   </div>
 ))
+SectionHeader.displayName = 'SectionHeader'
 
+// EducationCard Component
 const EducationCard = memo(({ item, index, isVisible }) => (
   <div
-    className={`bg-gradient-to-br from-slate-800 to-slate-900 text-white border border-emerald-500/20 rounded-lg p-6 shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 hover:-translate-y-2 hover:border-emerald-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"
-      }`}
+    className={`bg-gradient-to-br from-slate-800 to-slate-900 text-white border border-emerald-500/20 rounded-lg p-6 shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 hover:-translate-y-2 hover:border-emerald-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"}`}
     data-index={index}
   >
     <h3 className="font-serif font-bold text-xl mb-2 hover:text-emerald-400 transition-colors">
@@ -35,11 +36,12 @@ const EducationCard = memo(({ item, index, isVisible }) => (
     </p>
   </div>
 ))
+EducationCard.displayName = 'EducationCard'
 
+// CourseCard Component
 const CourseCard = memo(({ item, index, isVisible }) => (
   <div
-    className={`bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-500/20 rounded-lg p-6 shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:border-purple-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"
-      }`}
+    className={`bg-gradient-to-br from-slate-800 to-slate-900 border border-purple-500/20 rounded-lg p-6 shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:border-purple-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"}`}
     data-index={index}
   >
     <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -59,8 +61,7 @@ const CourseCard = memo(({ item, index, isVisible }) => (
       {item.skills.map((skill, skillIndex) => (
         <span
           key={skill}
-          className={`bg-gradient-to-r from-slate-700 to-slate-600 px-3 py-1 rounded-full text-sm hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer ${isVisible ? "animate-fadeInUp" : "opacity-0"
-            }`}
+          className={`bg-gradient-to-r from-slate-700 to-slate-600 px-3 py-1 rounded-full text-sm hover:from-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}
           style={{ animationDelay: `${skillIndex * 0.1}s` }}
         >
           {skill}
@@ -69,11 +70,12 @@ const CourseCard = memo(({ item, index, isVisible }) => (
     </div>
   </div>
 ))
+CourseCard.displayName = 'CourseCard'
 
+// ExperienceCard Component
 const ExperienceCard = memo(({ item, index, isVisible }) => (
   <div
-    className={`grid md:grid-cols-3 bg-gradient-to-r from-yellow-50 to-orange-50 gap-6 p-6 rounded-lg shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 border border-blue-500/20 hover:border-blue-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"
-      }`}
+    className={`grid md:grid-cols-3 bg-gradient-to-r from-yellow-50 to-orange-50 gap-6 p-6 rounded-lg shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 hover:-translate-y-2 hover:scale-105 border border-blue-500/20 hover:border-blue-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"}`}
     data-index={index}
   >
     <div className="md:col-span-1">
@@ -93,6 +95,7 @@ const ExperienceCard = memo(({ item, index, isVisible }) => (
     </div>
   </div>
 ))
+ExperienceCard.displayName = 'ExperienceCard'
 
 const Resume = () => {
   const [visibleItems, setVisibleItems] = useState(new Set())
@@ -268,7 +271,6 @@ const Resume = () => {
           </section>
         </div>
       </div>
-
 
       <style jsx>{`
         @keyframes fadeInUp {

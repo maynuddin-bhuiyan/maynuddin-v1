@@ -1,9 +1,6 @@
 "use client"
-
 import { memo, useRef } from "react"
 import Slider from "react-slick"
-import "slick-carousel/slick/slick-theme.css"
-import "slick-carousel/slick/slick.css"
 
 // Data for technologies and skills
 const technologies = [
@@ -155,17 +152,20 @@ const TechSkillCard = memo(({ item }) => {
           {item?.icon}
         </div>
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{item?.name}</h3>
-        <div className="flex gap-2 items-center justify-center"><span className="inline-block bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 text-xs px-2 py-1 rounded-full">
-          {item?.category}
-        </span>
+        <div className="flex gap-2 items-center justify-center">
+          <span className="inline-block bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-200 text-xs px-2 py-1 rounded-full">
+            {item?.category}
+          </span>
           <span className={`inline-block px-2 py-1 rounded-full text-xs ${getLevelColor(item?.level)}`}>
             {item?.level}
-          </span></div>
+          </span>
+        </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{item?.description}</p>
       </div>
     </div>
   )
 })
+TechSkillCard.displayName = 'TechSkillCard'
 
 export default function TechSkillsSlider() {
   const techSwiperRef = useRef(null)
