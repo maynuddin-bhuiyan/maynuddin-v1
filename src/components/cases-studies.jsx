@@ -171,7 +171,7 @@ export default function CaseStudies() {
               {/* Main Featured Project */}
               <div className="lg:col-span-8">
                 <div
-                  className={`group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 backdrop-blur-sm h-[500px] cursor-pointer transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/30 rounded-lg ${animationPhase === "exit"
+                  className={`group relative overflow-hidden bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 backdrop-blur-sm h-[400px] lg:h-[500px] cursor-pointer transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-500/30 rounded-lg ${animationPhase === "exit"
                     ? `scale-95 opacity-60 ${slideDirection === "left" ? "-translate-x-8 rotate-2" : "translate-x-8 -rotate-2"} blur-sm`
                     : animationPhase === "enter"
                       ? `scale-105 opacity-80 ${slideDirection === "left" ? "translate-x-4" : "-translate-x-4"}`
@@ -217,7 +217,7 @@ export default function CaseStudies() {
                       {projects[currentIndex].subtitle}
                     </p>
                     <div
-                      className="flex items-center justify-between transform transition-all duration-300 group-hover:translate-x-1"
+                      className="flex flex-wrap items-center justify-between transform transition-all duration-300 group-hover:translate-x-1"
                       style={{ transitionDelay: "100ms" }}
                     >
                       <div className="flex gap-2">
@@ -311,37 +311,39 @@ export default function CaseStudies() {
 
             {/* Navigation Controls */}
             <div
-              className={`flex items-center justify-between transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`lg:flex items-center justify-between transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               style={{ transitionDelay: "600ms" }}
             >
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={prevProject}
-                  disabled={isTransitioning}
-                  className={`inline-flex items-center justify-center w-10 h-10 bg-slate-800/50 border border-slate-700 hover:bg-slate-700 hover:border-slate-600 text-white transition-all duration-300 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed rounded-md ${isTransitioning && slideDirection === "right"
-                    ? "scale-125 rotate-180 bg-blue-500/20 border-blue-500/50 shadow-lg shadow-blue-500/25"
-                    : "hover:rotate-12"
-                    }`}
-                >
-                  <ChevronLeft
-                    className={`w-4 h-4 transition-transform duration-300 ${isTransitioning && slideDirection === "right" ? "scale-125 -translate-x-1" : "hover:-translate-x-0.5"
+              <div className="flex justify-between items-center gap-4 mb-5 lg:mb-0">
+                <div className="flex items-center justify-center gap-3 lg:gap-5">
+                  <button
+                    onClick={prevProject}
+                    disabled={isTransitioning}
+                    className={`inline-flex items-center justify-center w-10 h-10 bg-slate-800/50 border border-slate-700 hover:bg-slate-700 hover:border-slate-600 text-white transition-all duration-300 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed rounded-md ${isTransitioning && slideDirection === "right"
+                      ? "scale-125 rotate-180 bg-blue-500/20 border-blue-500/50 shadow-lg shadow-blue-500/25"
+                      : "hover:rotate-12"
                       }`}
-                  />
-                </button>
-                <button
-                  onClick={nextProject}
-                  disabled={isTransitioning}
-                  className={`inline-flex items-center justify-center w-10 h-10 bg-slate-800/50 border border-slate-700 hover:bg-slate-700 hover:border-slate-600 text-white transition-all duration-300 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed rounded-md ${isTransitioning && slideDirection === "left"
-                    ? "scale-125 rotate-180 bg-blue-500/20 border-blue-500/50 shadow-lg shadow-blue-500/25"
-                    : "hover:-rotate-12"
-                    }`}
-                >
-                  <ChevronRight
-                    className={`w-4 h-4 transition-transform duration-300 ${isTransitioning && slideDirection === "left" ? "scale-125 translate-x-1" : "hover:translate-x-0.5"
+                  >
+                    <ChevronLeft
+                      className={`w-4 h-4 transition-transform duration-300 ${isTransitioning && slideDirection === "right" ? "scale-125 -translate-x-1" : "hover:-translate-x-0.5"
+                        }`}
+                    />
+                  </button>
+                  <button
+                    onClick={nextProject}
+                    disabled={isTransitioning}
+                    className={`inline-flex items-center justify-center w-10 h-10 bg-slate-800/50 border border-slate-700 hover:bg-slate-700 hover:border-slate-600 text-white transition-all duration-300 hover:scale-110 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed rounded-md ${isTransitioning && slideDirection === "left"
+                      ? "scale-125 rotate-180 bg-blue-500/20 border-blue-500/50 shadow-lg shadow-blue-500/25"
+                      : "hover:-rotate-12"
                       }`}
-                  />
-                </button>
+                  >
+                    <ChevronRight
+                      className={`w-4 h-4 transition-transform duration-300 ${isTransitioning && slideDirection === "left" ? "scale-125 translate-x-1" : "hover:translate-x-0.5"
+                        }`}
+                    />
+                  </button>
+                </div>
                 <div className="flex gap-2 ml-4">
                   {projects.map((_, index) => (
                     <button

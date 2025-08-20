@@ -12,7 +12,7 @@ const SectionHeader = memo(({ icon, title, index, isVisible }) => (
     >
       {icon}
     </div>
-    <h2 className="font-serif font-bold text-4xl text-white bg-clip-text text-transparent">
+    <h2 className="font-serif font-bold text-2xl lg:text-4xl text-white bg-clip-text text-transparent">
       {title}
     </h2>
   </div>
@@ -25,7 +25,7 @@ const EducationCard = memo(({ item, index, isVisible }) => (
     className={`bg-gradient-to-br from-slate-800 to-slate-900 text-white border border-emerald-500/20 rounded-lg p-6 shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 hover:-translate-y-2 hover:border-emerald-500/40 ${isVisible ? "translate-y-0 opacity-100 animate-fadeInUp" : "translate-y-8 opacity-0"}`}
     data-index={index}
   >
-    <h3 className="font-serif font-bold text-xl mb-2 hover:text-emerald-400 transition-colors">
+    <h3 className="font-serif font-bold text-lg lg:text-xl mb-2 hover:text-emerald-400 transition-colors">
       {item.institution}
     </h3>
     <p className="text-emerald-400 font-semibold mb-2 animate-pulse">{item.period}</p>
@@ -45,7 +45,7 @@ const CourseCard = memo(({ item, index, isVisible }) => (
     data-index={index}
   >
     <div className="flex flex-wrap items-center gap-3 mb-4">
-      <h3 className="font-serif text-white font-bold text-xl hover:text-purple-400 transition-colors">
+      <h3 className="font-serif text-white font-bold text-lg lg:text-xl hover:text-purple-400 transition-colors">
         {item.title}
       </h3>
       <Link
@@ -79,7 +79,7 @@ const ExperienceCard = memo(({ item, index, isVisible }) => (
     data-index={index}
   >
     <div className="md:col-span-1">
-      <h3 className="font-bold text-xl mb-2 hover:text-blue-600 transition-colors">{item.title}</h3>
+      <h3 className="font-bold text-lg lg:text-xl mb-2 hover:text-blue-600 transition-colors">{item.title}</h3>
       <p className="font-semibold mb-2 text-blue-600 animate-pulse">{item.period}</p>
       <Link
         target="_blank"
@@ -206,7 +206,7 @@ const Resume = () => {
       <div className="relative z-10 py-10 lg:py-20">
         <div className="container">
           <header className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-white mb-4" aria-label="Professional Resume">
+            <h1 className="text-3xl lg:text-6xl font-bold text-white mb-4" aria-label="Professional Resume">
               {typewriterText}
               <span className="animate-pulse">|</span>
             </h1>
