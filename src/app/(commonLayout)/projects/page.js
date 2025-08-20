@@ -1,4 +1,4 @@
-import CaseStudies from "@/components/cases-tudies/CaseStudies";
+import CaseStudies from "@/components/cases-studies";
 
 export default function Projects() {
     return (

@@ -1,10 +1,10 @@
-import AboutModern from "@/components/about/About";
+import About from "@/components/about";
 import TechSkillsSlider from "@/components/tech-skills-slider";
 
 export default function AboutUs() {
     return (
         <>
-            <AboutModern />
+            <About />
             <TechSkillsSlider />
         </>
     );
