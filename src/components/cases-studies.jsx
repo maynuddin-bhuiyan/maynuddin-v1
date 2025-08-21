@@ -374,7 +374,7 @@ export default function CaseStudies() {
                   ))}
                 </div>
               </div>
-              <button
+              <Link target="_blank" href={"https://docs.google.com/document/d/1rADskxGCWAM4tTQmoOosOWTk81lhxdfM/edit?usp=sharing&ouid=116522643235246232376&rtpof=true&sd=true"}
                 className={`inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white border-0 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 group active:scale-95 hover:rotate-1 ${isTransitioning ? "animate-pulse scale-105 shadow-lg shadow-purple-500/25" : ""
                   }`}
               >
@@ -383,7 +383,7 @@ export default function CaseStudies() {
                     }`}
                 />
                 View All Projects
-              </button>
+              </Link>
             </div>
           </div>
         </div>
