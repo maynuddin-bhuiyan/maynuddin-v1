@@ -1,43 +1,58 @@
 "use client";
 import { ArrowUpRight, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-
+// HTML, CSS, JavaScript, , ES6, SCSS, and Redux! I also have experience with 
 const projects = [
   {
     id: 1,
-    title: "Tigger II",
+    title: "Tiger New Energy",
     subtitle: "Clean Design & Responsive Applications",
     category: "Web Design",
-    image: "/product-2.png",
-    tags: ["UI/UX", "Responsive", "Modern"],
+    image: "/service-5.png",
+    tags: ["Next.js", "Responsive", "JavaScript", "Tailwind CSS"],
     year: "2024",
+    href: "https://tigernewenergy.com/",
   },
   {
     id: 2,
     title: "Fashion Store",
     subtitle: "E-commerce Platform",
     category: "E-commerce",
-    image: "/service-2.png",
+    image: "/product-2.png",
     tags: ["React", "Commerce", "Mobile"],
     year: "2024",
+    href: "https://addition-afsar.vercel.app/",
   },
   {
     id: 3,
     title: "Job Portal",
     subtitle: "Career Discovery Platform",
     category: "Platform",
-    image: "/hover-5.png",
+    image: "/gallery-3.png",
     tags: ["Next.js", "Database", "Analytics"],
     year: "2023",
+    href: "https://career-props.vercel.app/",
   },
   {
     id: 4,
-    title: "Job Portal",
-    subtitle: "Career Discovery Platform",
-    category: "Platform",
-    image: "/service-6.png",
-    tags: ["Next.js", "Database", "Analytics"],
+    title: "Faculty Entertainment",
+    subtitle: "This website offers services.",
+    category: "Personal Project",
+    image: "/project-1.png",
+    tags: ["React.js", "MUI", "Analytics"],
     year: "2023",
+    href: "https://facultyentertainment.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Anowara Power Tech",
+    subtitle: "Built for the Road Reliable power for every ride",
+    category: "Client Project",
+    image: "/project-2.png",
+    tags: ["Next.js", "Next.js Api", "Analytics", "Tailwind CSS", "Typescript"],
+    year: "2023",
+    href: "https://www.anowarapowertech.com/",
   },
 ];
 
@@ -235,12 +250,12 @@ export default function CaseStudies() {
                           </span>
                         ))}
                       </div>
-                      <button className="inline-flex items-center px-4 py-2 text-white hover:text-blue-300 hover:bg-blue-500/10 transition-all duration-300 group/btn hover:scale-105 rounded-md">
+                      <Link target="_blank" href={projects[currentIndex]?.href} className="inline-flex items-center px-4 py-2 text-white hover:text-blue-300 hover:bg-blue-500/10 transition-all duration-300 group/btn hover:scale-105 rounded-md">
                         View Project
                         <ArrowUpRight
                           className="w-4 h-4 ml-1 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 group-hover/btn:rotate-12"
                         />
-                      </button>
+                      </Link>
                     </div>
                   </div>
 
